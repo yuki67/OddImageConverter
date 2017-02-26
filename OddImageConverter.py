@@ -1,7 +1,7 @@
 converters = [
-    ["excel", [1024, 1024], None],
-    ["shell script", [50, 50], None],
-    ["html", [300, 300], None]
+    ["excel", (1024, 1024), None],
+    ["shell script", (50, 50), None],
+    ["html", (300, 300), None]
 ]
 
 
