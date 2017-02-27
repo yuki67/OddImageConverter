@@ -21,7 +21,7 @@ def prompt():
     # 変換を実行
     if args.filename:
         img = Image.open(args.filename)
-        OddImageConverter.convert(img)
+        OddImageConverter.convert(img, args.filename)
 
 if __name__ == "__main__":
     prompt()
