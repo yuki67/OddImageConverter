@@ -47,8 +47,8 @@ class ConverterShell(Converter.Converter):
     def truncate(val):
         """ valをPallet_Numsの一番近い値に潰す """
         if val < 155:
-            if val < 120:
-                if val < 42:
+            if val < 115:
+                if val < 48:
                     return 0
                 else:
                     return 95
@@ -56,14 +56,12 @@ class ConverterShell(Converter.Converter):
                 return 135
         else:
             if val < 195:
-                return 135
+                return 175
             else:
                 if val < 235:
                     return 215
                 else:
                     return 255
-
-    Pallet_Nums = [0, 95, 135, 175, 215, 255]
 
     # RGB値と対応するシェルのカラーコード(ソート済み)
     # 一部変なRGB値があるのでそれはコメントアウトした。
