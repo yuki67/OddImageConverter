@@ -10,10 +10,10 @@ class Converter(object):
         d = max(1, max(len(color_array), len(color_array[0])) / size)
         x = y = 0
         self.open(color_array, size, filename)
-        while y < len(color_array[0]):
+        while y < len(color_array):
             x = 0
-            while x < len(color_array):
-                self.put_pixel(color_array[int(x)][int(y)])
+            while x < len(color_array[0]):
+                self.put_pixel(color_array[int(y)][int(x)])
                 x += d
             self.new_line()
             y += d
@@ -28,7 +28,7 @@ class Converter(object):
 
     def put_pixel(self, color):
         """
-        座標(x, y)をcolorで塗る
+        colorを持つ点を追加する
         描かれる順番は
         (0,0)->(0,1)->...->(0,n)->
         (1,0)->(1,1)->...->(1,n)->

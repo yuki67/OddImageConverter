@@ -32,8 +32,8 @@ class ConverterExcel(Converter.Converter):
             # pylint: enable=maybe-no-member
 
     def put_pixel(self, color):
-        """ (x, y)にcolorを描画する """
-        key = openpyxl.utils.get_column_letter(self.y + 1) + str(self.x + 1)
+        """ (self.x, self.y)にcolorを描画する """
+        key = openpyxl.utils.get_column_letter(self.x + 1) + str(self.y + 1)
         self.file.active[key].fill = openpyxl.styles.PatternFill(patternType='solid', fgColor=self.x11_from_rgb(color))
         self.x += 1
 
