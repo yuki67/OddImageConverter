@@ -1,8 +1,9 @@
 import Converter_Excel
+import Converter_Shell
 
 converters = [
     ["excel", 200, Converter_Excel],
-    ["shell script", 50, None],
+    ["shell script", 50, Converter_Shell],
     ["html", 300, None]
 ]
 
